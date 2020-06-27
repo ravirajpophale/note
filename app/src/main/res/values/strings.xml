@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Easy Note</string>
+    <string name="title_activity_detail">Detail</string>
+    <string name="sample_text_description">Sample Text Description</string>
+    <string name="empty_add_new_notes_using">\ Empty ! Add New Notes using  + \</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="enter_details">Enter Details</string>
+</resources>

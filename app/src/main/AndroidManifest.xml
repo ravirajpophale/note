@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ravirajpophale.easynote">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.ravirajpophale.easynote.Edit">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ravirajpophale.easynote.MainActivity" />
+        </activity>
+
+
+        <activity
+            android:name="com.ravirajpophale.easynote.Detail"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName="com.ravirajpophale.easynote.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ravirajpophale.easynote.MainActivity" />
+        </activity>
+        <activity android:name="com.ravirajpophale.easynote.AddNote">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ravirajpophale.easynote.MainActivity" />
+        </activity>
+        <activity android:name="com.ravirajpophale.easynote.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <!-- Firebase Notification stuff -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/mini" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@drawable/mini" />
+        <service
+            android:name="com.ravirajpophale.easynote.MyFirebaseMessagingService"
+            android:exported="false"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="note" />
+
+    </application>
+
+</manifest>
